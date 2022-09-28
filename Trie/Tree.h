@@ -29,5 +29,6 @@ public:
 	std::string RecommendWord(std::string root);
 
 	Tree();
+	~Tree();
 };
 

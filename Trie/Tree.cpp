@@ -12,6 +12,12 @@ Node::Node(char value)
 Tree::Tree()
 	:Head{ std::make_shared<Node>('$') }{}
 
+
+Tree::~Tree()
+{
+	Head = nullptr;
+}
+
 int Tree::GetCount()
 {
 	return Head->UseCount;

@@ -7,19 +7,30 @@
 
 int main()
 {
+    bool gonnaBeFalse = true;
     std::string input;
-    Tree superTree = Tree();
-    for (int i = 0; i < 3; i ++)
-    {
-        std::cin >> input;
-        superTree.AddWord(input);
-    }
     while (true)
     {
-        std::cin >> input;
-        std::cout << superTree.RecommendWord(input) << std::endl;
+        gonnaBeFalse = true;
+        while (gonnaBeFalse)
+        {
+            std::cin >> input;
+            gonnaBeFalse = false;
+            Tree superTree = Tree();
+            for (int i = 0; i < 1000; i++)
+            {
+                //std::cin >> input;
+                superTree.AddWord(std::to_string(i) + "ThisIsABigString");
+            }
+            std::cin >> input;
+            //while (true)
+            //{
+            //    std::cin >> input;
+            //    std::cout << superTree.RecommendWord(input) << std::endl;
+            //}
+            input = "";
+        }
     }
-    input = "";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
